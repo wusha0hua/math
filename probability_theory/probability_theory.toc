@@ -1,0 +1,56 @@
+\contentsline {section}{\numberline {1}Basical Probabilistic Model}{3}%
+\contentsline {subsection}{\numberline {1.1}Space of Elementary Events}{3}%
+\contentsline {subsection}{\numberline {1.2}Classcal Probabilistic Models}{3}%
+\contentsline {subsubsection}{\numberline {1.2.1}Random Sampling}{3}%
+\contentsline {subsubsection}{\numberline {1.2.2}Arrangment}{4}%
+\contentsline {subsubsection}{\numberline {1.2.3}Binomial Distribution}{4}%
+\contentsline {subsubsection}{\numberline {1.2.4}Multinomial Distribution}{5}%
+\contentsline {subsubsection}{\numberline {1.2.5}Hypergeoetric Distrbution}{5}%
+\contentsline {subsubsection}{\numberline {1.2.6}Stirling's Approximation}{5}%
+\contentsline {subsection}{\numberline {1.3}Conditional Probability}{5}%
+\contentsline {subsubsection}{\numberline {1.3.1}Conditional Probbility}{5}%
+\contentsline {subsubsection}{\numberline {1.3.2}Total Probability Theorem}{5}%
+\contentsline {subsubsection}{\numberline {1.3.3}Bayes Rule}{6}%
+\contentsline {subsubsection}{\numberline {1.3.4}Independence}{6}%
+\contentsline {section}{\numberline {2}Random Variable}{7}%
+\contentsline {subsection}{\numberline {2.1}Cumulative Distribution Function}{7}%
+\contentsline {subsubsection}{\numberline {2.1.1}Discrete Random Variable}{7}%
+\contentsline {subsection}{\numberline {2.2}Common Distribution}{7}%
+\contentsline {subsubsection}{\numberline {2.2.1}Poission Distribution}{7}%
+\contentsline {subsection}{\numberline {2.3}Probability Density Function}{8}%
+\contentsline {subsubsection}{\numberline {2.3.1}Uniform Distribution}{8}%
+\contentsline {subsubsection}{\numberline {2.3.2}Exponential Distribution}{8}%
+\contentsline {subsubsection}{\numberline {2.3.3}Normal Distribution}{8}%
+\contentsline {subsection}{\numberline {2.4}Joint Distribution Function}{9}%
+\contentsline {subsubsection}{\numberline {2.4.1}Discrete Jiont Distribution Function}{9}%
+\contentsline {subsubsection}{\numberline {2.4.2}Joint Probability Density}{9}%
+\contentsline {subsubsection}{\numberline {2.4.3}Geometric Probability}{10}%
+\contentsline {subsubsection}{\numberline {2.4.4}Two-Dimensional Normal Distribution}{10}%
+\contentsline {subsubsection}{\numberline {2.4.5}Independence}{10}%
+\contentsline {subsubsection}{\numberline {2.4.6}Conditional Distribution}{10}%
+\contentsline {subsubsection}{\numberline {2.4.7}Random Variable Function}{10}%
+\contentsline {section}{\numberline {3}Numercial Characters}{11}%
+\contentsline {subsection}{\numberline {3.1}Expection}{11}%
+\contentsline {subsubsection}{\numberline {3.1.1}Discrete Distribution}{11}%
+\contentsline {subsubsection}{\numberline {3.1.2}Continuous Distribution}{11}%
+\contentsline {subsubsection}{\numberline {3.1.3}Property}{11}%
+\contentsline {subsubsection}{\numberline {3.1.4}Random Variable Function}{11}%
+\contentsline {subsection}{\numberline {3.2}Variance}{11}%
+\contentsline {subsubsection}{\numberline {3.2.1}Discrete Distribution}{11}%
+\contentsline {subsubsection}{\numberline {3.2.2}Continuous Distribution}{12}%
+\contentsline {subsubsection}{\numberline {3.2.3}Property}{12}%
+\contentsline {subsection}{\numberline {3.3}Expection and Variance of Common Distribution Function}{12}%
+\contentsline {subsubsection}{\numberline {3.3.1}Binomial Distribution}{12}%
+\contentsline {subsubsection}{\numberline {3.3.2}Poisson Distribution}{12}%
+\contentsline {subsubsection}{\numberline {3.3.3}Geometric Distribution}{12}%
+\contentsline {subsubsection}{\numberline {3.3.4}Exponential Distribution}{12}%
+\contentsline {subsubsection}{\numberline {3.3.5}Normal Distribution}{13}%
+\contentsline {subsection}{\numberline {3.4}Covariance}{13}%
+\contentsline {subsection}{\numberline {3.5}Correlation Coefficient}{13}%
+\contentsline {subsection}{\numberline {3.6}Law of large numbers and Central limit Theorem}{14}%
+\contentsline {subsubsection}{\numberline {3.6.1}Law of large numbers}{14}%
+\contentsline {subsubsection}{\numberline {3.6.2}Chebyshev Law of Large num-herd}{14}%
+\contentsline {subsubsection}{\numberline {3.6.3}Wiener-Khinchin Law of Large Numbers}{14}%
+\contentsline {subsubsection}{\numberline {3.6.4}Bernoulli Law of Large Num-hers}{14}%
+\contentsline {subsection}{\numberline {3.7}Central Limit Theorom}{15}%
+\contentsline {subsubsection}{\numberline {3.7.1}De Moivre-Laplace}{15}%

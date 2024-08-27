@@ -1,0 +1,151 @@
+\documentclass{ctexart}	
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\setlength{\parindent}{1.5em}
+\renewcommand\contentsname{content}		
+\date{}
+	\title{Modern Algebra}
+\begin{document}
+	\maketitle
+\tableofcontents
+\newpage
+\section{Group Theory}
+\subsection{Semi-Group and Group}
+\subsubsection{Difinition of Groop}
+Suppose \(\mathbb{S}\)\(\neq\)\(\emptyset\) , difine an algebraic operation called mutiplication ,marked as \(\cdot\) , and this operation satisfies closure and associtive law , then \((\mathbb{S},\cdot)\) is a \textbf{semi-group}
+
+\textbf{Closure:}
+\[\forall a,b\in \mathbb{S}\ , \ a\cdot b\in \mathbb{S}\]
+
+
+\textbf{Associative Law:}
+\[\forall a,b,c\in \mathbb{S}\ , \ (a\cdot b)\cdot c=a\cdot (b\cdot c)\]
+
+\vspace{12 pt}
+for a semi-group \(G(\mathbb{S},\ \cdot\ )\) , if it satisfies
+\[\exists e\in G\ , \ \forall a\in G\  \Rightarrow \ e\cdot a=a\]
+and
+\[\forall a\in G\ ,\ \exists b \in G\ \Rightarrow \ b\cdot\ a=e\]
+it is a group , and e is a left identity element , b is a left inverse element
+
+\vspace{12 pt}
+Generally if G is a \textbf{group} it will satisfies
+\\(1)G satisfies closure
+\\(2)G satisfies asscoiative law
+\\(3)there is a identity element in G
+\\(4)there is an inverse element for each element in G
+
+\vspace{12 pt}
+If a group G satisfies law of communication , G is a \textbf{Abelain Group}
+
+\vspace{12 pt}
+\textbf{law of communication:}
+\[\forall a,b\in \mathbb{S} \ \Rightarrow \ a\cdot b=b\cdot a\]
+
+\vspace{12 pt}
+\subsubsection{Property of Group}
+The number of elements in \(G\) expresses \textbf{the order of \(G\)} , marked as \(\vert G \vert\) , if \(\vert G \vert \)=\(\infty\) , \(G\) is a infinite group , if \(\vert G \vert <\infty\) , \(G\) is a finite group
+
+\vspace{12 pt}
+For \(G(\mathbb{S},\ \cdot \ )\ , \ a\in G\) 
+\[\overbrace{a\cdot a\cdot \cdots \cdot a}^{n}=a^n\]
+
+For \(G(\mathbb{S},\ + \ )\ , \ a\in G\) 
+\[\overbrace{a+a+\cdots+a}^{n}=na\]
+
+\vspace{12 pt}
+\(\forall G\) , \(G\) is a group , then \(G\) satisfies \textbf{Cancellation law}
+\[ax=ax'\ \Leftrightarrow\ x=x' \]
+
+\textbf{Note: }if \(G\) is not a Abelian group , left cancellation law is satisfied does not mean right cancellation law is satisfied
+
+\vspace{12 pt}
+If a set \(G\neq \emptyset\) and the operation in \(G\) satisfies closure and associative law ,then
+\[if\ G\ is\ a\ group\ \Leftrightarrow \ \forall a,b\in G\ , \ ax=b\ and\ ya=b\ have\ solution\]
+
+\textbf{Corollary:}
+\\If a set \(G\neq \emptyset\) and the operation in \(G\) satisfies closure and associative law and \(G\) is a group \(\Leftrightarrow\) \(G\) satisfies cancellation law
+
+\subsection{Subgroup}
+if \(H\subset G\) and \(H\) with the operation in G is also form a group , \(H\) is a \textbf{subgroup} of \(G\)
+
+\vspace{12 pt}
+ if e is an identity element in \(G\) , then e is also an identity element in \(H\)
+
+ if a\(\in H\) , \(a^{-1}\) \(\in G\) and it is a inverse elenment of a , then \(a^{-1}\) \(\in H\) 
+
+\vspace{12 pt}
+if \(H \in G\) , and \(H\neq \emptyset\) , \(H\) is a subqroup of \(G\) \(\Leftrightarrow\)
+\[\forall a,b\in H\ ,\ ab\in H\]
+\[\forall a\in H\ ,\ a^{-1}\in H\]
+
+\vspace{12 pt}
+\textbf{Corollary:}
+
+(1) if \(H \subset G\) , and \(H\neq \emptyset\) , \(H\) is a subqroup of \(G\) \(\Leftrightarrow\)
+\[\forall a,b\in H\ ,\ ab^{-1}\in H \]
+
+(2) if \(H \subset G\) , \(H\neq \emptyset\) and \(\vert H \vert <\infty\) , \(H\) is a subqroup of \(G\) \(\Leftrightarrow\)
+\[\forall a,b\in H\ ,\ ab\in H \]
+
+\vspace{12 pt}
+\subsection{Homomorphism and Isomorphism}
+Suppose \(G(\mathbb{S},\ \cdot\ )\) and \(G'(\mathbb{S'},\ \odot\ )\) , \(\exists \ f :\ \mathbb{S}\rightarrow \mathbb{S'}\) , \(\forall a,b \in \mathbb{S}\) , let
+\[f(a\cdot b)=f(a)\odot f(b)\]
+then this \(f\) is \textbf{homomorphic mapping} , \(G\) and \(G'\) are homomorphic 
+
+\noindent if \(f\) is a bijection , \(f\) is also a \textbf{isomorphic mapping} , \(G\) and \(ceG'\) are isomorphic
+
+\vspace{12 pt}
+if \(G=G'\) , \(f\) is self-homomorphic or self-isomorphic mapping
+
+\vspace{12 pt}
+\subsection{Cyclic Group}
+\subsubsection{Difinition and Property of Cyclic Group}
+if \(\exists g \in G\) and \(G=\{ \cdots g^{-1},g^0,g^1,\cdots\}\) , \(G\) is a \textbf{cyclic group} , \(g\) is a \textbf{generator} of \(G\)  
+
+if \(G\) is a cyclic group and \(\vert G \vert =n\) \(\Rightarrow\) \(G=\{g^0,g^1,\cdots, g^{n-1}\}\)
+
+if \(\exists\)d\(>0\) , let \(g^d=e\) , \(d_{min}\) is the order of \(g\) , marked as \(\vert g\vert\)
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\\(1) if \(G\) is a cyclic group and \(\vert G\vert \)=n \(\Rightarrow\) \(\forall g\in G\ ,\ \vert g\vert\)=n
+\\(2) if \(\vert g \vert \)=n , \(g^d=e\) \(\Rightarrow\) \(n\mid d\)
+\\(3) if \(\vert g\vert\)=n \(\Rightarrow\) \(\vert a^k\vert = \frac{n}{(n,k)}\)
+\\(4) if \(\vert G\vert\)=n , \(\forall H\subset G\) \(\Rightarrow\) \(\vert H \vert\in \mathcal{D}(n)\)
+
+\vspace{12 pt}
+\textbf{Prove:}
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\vspace{12 pt}
+\subsubsection{Residue Class Group}
+\[\mathbb{S}=\{\overline{0},\overline{1},\cdots \overline{p-1}\}\]
+\\is a residue system mod \(p\) , if \(p\) is a prime , then \(\mathbb{S}\) and \(\cdot\) or \(+\) form a cyclic group , marked as \(G(\mathbb{S},\ \cdot\ )\) or \(G(\mathbb{S}, +)\) , \(\vert G\vert =p\)
+
+\vspace{12 pt}
+\text{Prove:}
+\begin{align*}
+\text{(1) closure:}\qquad &\\
+\because &\mathbb{Z}\subset \mathbb{S}\\
+&\mathbb{Z}\times\mathbb{Z}\subset\mathbb{Z}\\
+\therefore &\forall a,b\in \mathbb{S}\ ,\ ab\in\mathbb{S}\\
+\text{(2) associative law:}\qquad &\\
+&\text{obviously}\\
+\text{(3) identity element:}\qquad &\\
+&e=\overline{1}\\
+\text{(4) inverse element:}\qquad &\\
+\because &\forall a \in \mathbb{S},(a,p)=1\\
+\therefore &\exists u,v \in\mathbb{Z}\\
+\text{let}\quad& up+va=1\\
+\therefore & va\equiv 1(mod\ p)
+\end{align*}
+
+
+
+\end{document}

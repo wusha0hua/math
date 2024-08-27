@@ -1,0 +1,98 @@
+\documentclass{ctexart}	
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\setlength{\parindent}{1.5em}
+\renewcommand\contentsname{content}	
+\date{}
+
+\title{Probability Theory}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Basics}
+\textbf{sample mean:}
+\[\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i\]
+\textbf{sample variance:}
+\[S^2=\frac{1}{n-1}\]
+
+\section{Distribution}
+\subsubsection{Chi-Square Distribution}
+if sequence \(X_1,\cdots ,X_n\) are independent and \(X_i\sim N(0,1)\)
+\[\chi^2 =\sum_{i=1}^{n}X_i\]
+\[\chi^2 \sim \chi^2(n)\]
+
+\[P\{\chi^2>\chi^2_{\alpha}(n)\}=\int_{\chi^2_{\alpha}(n)}^{+\infty}f_{\chi^2}(x)dx=\alpha\]
+
+\[E(\chi^2)=n\ \ D(\chi^2)=2n\]
+
+\[Y_1\sim \chi^2(n_1)\ , \ Y_2\sim \chi^2(n_2) \ \Rightarrow \ Y_1+Y_2\sim \chi^2(n_1+n_2)\]
+
+\[\chi^2\sim \chi^2(n) \ , \ n>45 \ \ \ \chi^2 \sim N(n,2n)\]
+
+\subsubsection{t-Distribution}
+if X and Y are indenpendent , \(X\sim N(0,1)\ , \ Y\sim \chi^2(n)\)
+\[T=\frac{X}{\sqrt{\frac{Y}{n}}} \ \Rightarrow \ T\sim t(n)\]
+
+\[0<\alpha<1\ , \ P\{T>t_\alpha(n)\}=\int_{t_\alpha(n)}^{+\infty}f_T(x)dx=\alpha\]
+
+\[\lim_{n\to \infty}f_T(x)=\phi(x)\]
+
+\[t_\alpha(n)=1-t_{1-\alpha}(n)\]
+
+\subsubsection{F-Distribution}
+if X and Y are independent , \(X\sim \chi^2(n_1)\ , \ Y\sim \chi^2(n_2)\)
+\[F=\frac{\frac{X}{n_1}}{\frac{Y}{n_2}} \ \Rightarrow \ F\sim F(n_1,n_2)\]
+
+\[0<\alpha <1 \ , \ P\{F>F_\alpha(n_1,n_2)\}=\int_{F_\alpha(n_1,n_2)}^{+\infty}f_F(x)dx=\alpha\]
+
+\[F\sim F(n_1,n_2)\ , \ \frac{1}{F}\sim F(n_2,n_1)\]
+\[F_{1-\alpha}(n_1,n_2)=\frac{1}{F_\alpha(n_2,n_1)}\]
+
+\newpage
+\section{Sampling Distribution}
+if \(X\sim N(\mu,\sigma^2)\) and \(X_1 ,\cdots ,X_n \) are samples 
+\[\overline{X}\sim N(\mu ,\frac{\sigma^2}{n})\]
+\[\frac{(n-1)}{\sigma^2}S^2\sim \chi^2(n-1)\]
+\[\frac{\overline{X}-\mu}{\frac{S}{\sqrt{n}}}\sim t(n-1)\]
+
+
+\vspace{12 pt}
+if \(X\sim N(\mu_1,\sigma^2_1)\) , \(Y\sim N(\mu_2,\sigma_2^2)\) , \(X_1 ,\cdots ,X_{n1}\) and \(Y_1 , \cdots , Y_{n2}\) are samples
+\[F=\frac{S_1^2/\sigma^2_1}{S_2^2/\sigma^2_2}\sim F(n_1-1,n_2-1)\]
+
+\[\sigma^2_1=\sigma^2_2=\sigma^2\ \Rightarrow \ T=\frac{(\overline{X}-\overline{Y})-(\mu_1-\mu_2)}{S_{\omega}\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\sim t(n_1+n_2-2)\]
+\[S_\omega =\sqrt{\frac{(n_1-1)S_1^2+(n_2-1)S^2_2}{n_1+n_2-2}}\]
+
+\newpage
+\section{Parameter Estimation}
+\subsection{Moment Estimation}
+\[\gamma_1=E(X)=\mu\]
+\[\gamma_2=E(X^2)=D(X)+E^2(X)=\sigma^2+\mu^2\]
+
+\subsection{Maximum Likelihood Estimation}
+
+\subsection{Optima Criterion of Estimation}
+\subsubsection{Unbaised}
+\[\hat{\theta}=\hat{\theta}(X_1,X_2,\cdots , X_n)\ , \ E(\hat{\theta})=\theta\]
+\subsubsection{effectiveness}
+\[\hat{\theta}_0=\hat{\theta}_0(X_1,\cdots ,X_n)\text{ is unbaised for }\hat{\theta}\ \ D(\hat{\theta}_0)\leq D(\hat{\theta})  \]
+
+\subsubsection{Consistence}
+\[\lim_{n\to \infty}P\{\mid \hat{\theta}_n-\theta \mid <\epsilon\}=1\]
+
+\subsection{Interval Estimation}
+
+\subsubsection{Confident Interval}
+
+\[\sigma^2\ \text{is kowned , }U=\frac{\overline{X}-\mu}{\sigma / \sqrt{n}}\sim N(0,1)\]
+\[[\overline{X}-\frac{\sigma}{\sqrt{n}}\mu_{\frac{\alpha}{2}},\overline{X}+\frac{\sigma}{\sqrt{n}}\mu_{\frac{\alpha}{2}}]\]
+
+\[\sigma^2\ \text{is unkowned , }T=\frac{\overline{X}-\mu}{\sigma /\sqrt{n}}\sim t(n-1)\]
+
+\end{document}

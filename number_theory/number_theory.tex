@@ -1,0 +1,537 @@
+\documentclass{ctexart}	
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\setlength{\parindent}{1.5em}
+\renewcommand\contentsname{content}	
+\date{}		
+	\title{Number Theory}
+\begin{document}
+	\maketitle
+\tableofcontents
+\newpage
+
+\section{Divisibility Theory}
+	\subsection{Divisibility}
+		\(\forall\)a,b\(\in\mathbb{Z}\),b\(\neq\)0,if there is a integer q let:
+		\[a=qb\]
+
+ then it is called that b can be divided by a or b divides b,marked as b\(\mid\)a,and b is a divisor of ,a is    a mutiple of b.Otherwise marked as b\(\nmid\)a.
+
+Specially,if a\(\neq\)0,and a is an integer,then a\(\mid\)0.
+
+\vspace{12 pt}
+\textbf{Theorem:}\(\quad\)suppose a,b,c\(\in\)\(\mathbb{Z}\)
+\\(1)if b\(\mid\)a and a\(\mid\)b,then a=\(\pm\)b
+\\(2)if a\(\mid\)b,and b\(\mid\)c,then a\(\mid\)c
+\\(3)if c\(\mid\)a and c\(\mid\)b,then c\(\mid\)ua+vb,u,v\(\in\)\(\mathbb{Z}\)
+\\(4)if c\(\mid\)\(a_{1}\)\(\cdots\)c\(\mid\)\(a_{k}\),then \(\forall\)\(u_{1}\)\(\cdots\)\(u_{k}\)\(\in\)\(\mathbb{Z}\),there is c\(\mid\)\((u_{1}a_{1}\)\(\cdots\)\(u_{k}a_{k})\)
+\\(5)if m\(\neq\)0 and a\(\mid\)b \(\Leftrightarrow\) ma\(\mid\)mb
+\\(6)if a=qb+r and b\(\mid\)a \(\Leftrightarrow\) b\(\mid\)r
+
+\vspace{12 pt}
+\textbf{Prove:}
+\\(1)(2)(4)(5)(6)skip
+\\(3) suppose a=qc,b=pc,then ua+vb=uqc+vpc,obviously
+
+ \vspace{12 pt}
+	\subsection{Greatest Common Divisor(GCD)}
+
+if \(\exists\)q,a=q\(r_{1}\),b=q\(r_{2}\),\(r_{1}\),\(r_{2}\)\(\in\)\(\mathbb{Z}\),then q is called a common divisor of a and b,\(\mathcal{D}\)(\(a_1\),\(\cdots\),\(a_k\))is a set of all common divisors of \(a_1\),\(\cdots\),\(a_k\)
+
+if \(\exists\)d\(\in\)\(\mathcal{D}\)(a,b) and \(\forall\)\(d_i\)\(\in\)\(\mathcal{D}\)(a,b),\(d_i\)\(\mid\)d,then d is the great common divisor of a and b,marked as d=(a,b) or d=gcd(a,b)
+
+
+\textbf{Theorem:}\(\quad\)a,b\(\in\)\(\mathbb{Z}\)
+\\(1)(a,b)=(a,-b)=(-a,b)=(-a,-b)=(\(\vert\)a\(\vert\),\(\vert\)b\(\vert\))
+\\(2)(0,a)=\(\vert\)a\(\vert\)
+\\(3)if \(a_i\)\(\mid\)\(a_j\),j=1\(\cdots\)k,(\(a_1\),\(\cdots\),\(a_i\),\(\cdots\),\(a_k\))=\(\vert\)\(a_i\)\(\vert\)
+
+\vspace{12 pt}
+\textbf{Prove:}
+\\(1)(2)(3)skip
+
+
+\subsection{Euclidean Alorithm}
+
+When a and b is large,to figure out their gcd directly is difficult,Euclidean Alorithml can be used to figure out their gcd
+
+Suppose a,b\(\in\)\(\mathbb{Z}\),let \(r_0\)=a,\(r_1\)=b,then:
+\begin{align*}
+r_0&=q_{1}r_{1}+r_{2}\quad 0\le r_{2}<r_1\\
+r_1&=q_{2}r_{2}+r_{3}\quad 0\le r_{3}<r_2\\
+&\vdots\\
+r_{k-2}&=q_{k-1}r_{k-1}+r_{k}\quad 0\le r_{k}<r_{k-1}\\
+r_{k-1}&=q_{k}r_{k}
+\end{align*}
+
+Now \(r_k\)=(a,b)
+
+\textbf{Prove:}
+
+if \(\exists\)\(r_i\) ,\(r_{i-1}\) ,\(r_i\)\(\mid\)\(r_{i-1}\) ,then \(r_{i-1}\)=\(q_i\)\(r_i\) ,otherwise,because b=\(r_1\)$>$\(r_2\)$>$\(\cdots\)$>$\(r_{k}\)$>$0 ,b is limited,so that \(r_i\)\(\ge\)\(r_{i-1}\)-1 ,and b-i+1\(\ge\)\(r_i\)\(\ge\)0 , when b-i+1=1 , then i=b , now \(r_i\)=1 , so that \(r_{i-1}\)=\(q_i\) , therefore we can always get the equation \(r_{k-1}\)=\(q_k\)\(r_k\) , now 
+\begin{align*}
+r_{k-2}&=q_{k-1}r_{k-1}+r_{k}=q_{k-1}q_kr_k+r_k\\
+r_{k-3}&=q_{k-2}r_{k-2}+r_{k-1}=q_{k-2}(q_{k-1}q_kr_k+r_k)+q_kr_k=r_k(q_{k-2}q_{k-1}q_{k}+q_{k-2}+q_{k})\\
+&\vdots\\
+b&=r_1=X_1r_k\\
+a&=r_0=X_2r_k
+\end{align*}
+
+
+How to confirm \(r_k\) is greatest?
+
+Construct contradiction
+
+\vspace{12 pt}
+\textbf{Corollary:}
+
+\(\exists\)u,v\(\in\)\(\mathbb{Z}\) , \(\forall\)a,b\(\in\)\(\mathbb{Z}\) , let 
+\[(a,b)=ua+vb\]
+
+\vspace{12 pt}
+\subsection{Least Common Mutiple}
+
+if \(\exists\)c , \(q_1\) , \(q_2\)\(\in\)\(\mathbb{Z}\) , for a and b , c=\(q_1\)a=\(q_2\)b ,then c is a common mutiple of a and b , suppose \(\mathcal{L}\)(\(a_1\)\(\cdots\)\(a_k\)) is a set of all common mutiples of \(a_1\)\(\cdots\)\(a_k\)
+
+if \(\exists\)l\(\in\)\(\mathcal{L}\)(a,b) and \(\forall\)\(l_i\)\(\in\)\(\mathcal{L}\)(a,b) , l\(\mid\)\(l_i\) , then l is called least common mutiple , marked as [a,b] or lcm(a,b)
+
+\vspace{12 pt}
+\subsection{Prime Number}
+
+if \(\mathcal{D}\)(p)=\{1,p\},p is called prime number
+
+if (a,b)=1 , it is called a and b are relatively prime and \(exists\)u,v\(\in\)\(\mathbb{Z}\) , let au+bv=1
+
+\textbf{Lemma:}
+
+(a,b)=1 \(\Leftrightarrow\) au+bv=1 , u,v\(\in\)\(\mathbb{Z}\)
+
+\vspace{12 pt}
+(a,p)=1,a=1\(\cdots\)2p-1 , p is a prime
+
+\vspace{12 pt}
+\subsection{Fundamental Theorem Arithmetic}
+
+\(\forall\)N\(\in\)\(\mathbb{Z}\) and N$>$1,\(\exists\)\(P_1\)\(\cdots\)\(P_k\) , \(a_1\)\(\cdots\)\(a_k\)\(\in\)\(\mathbb{Z}\) ,  \(\forall\)\(P_i\)$>$1 , \(a_i\)$>$1 , let
+\[N=\prod_{i=1}^{k}P_{i}^{a_i}\]
+
+\vspace{12 pt}
+suppose
+\[N_1=\prod_{i=1}^{k_1}P_{1i}^{a_{1i}}\]
+\[N_2=\prod_{i=1}^{k_2}P_{2i}^{a_{2i}}\]
+
+let
+\[S_1=\{P_{11},\cdots,P_{1k_1}\}\]
+\[S_2=\{P_{21},\cdots,P_{2k_2}\}\]
+
+if 
+\[S_1 \bigcup S2=\emptyset\]
+
+then
+\[(N_1,N_2)=1\]
+\[[N_1,N_2]=N_1N_2\]
+
+if 
+\[S_1 \bigcup S2=S\]
+\[S=\{P_j,\cdots,P_{j+l}\}\]
+
+then
+\[(N_1,N_2)=D=\prod_{i=j}^{j+l}{P_{i}^{a_i}}\qquad a_i=min\{a_{1j},a_{2j}\}\]
+
+and 
+\[(\frac{N_1}{D},\frac{N_2}{D})=1\]
+
+therefore
+\[[\frac{N_1}{D},\frac{N_2}{D}]=\frac{N_1N_2}{D^2}\]
+
+suppose
+\begin{align*}
+a , b\in \mathbb{Z}, m\neq 0, (a,b)=d\\
+a=q_1d,b=q_2d\\
+ma=q_1dm,mb=q_2dm\\
+(ma,mb)=dm=(a,b)\times m
+\end{align*}
+
+therefore
+\[[D\times \frac{N_1}{D},D\times \frac{N_2}{D}]= D\times \frac{N_1N_2}{D^2}  \]
+\[[N_1,N_2]=\frac{N_1N_2}{D}=\frac{N_1N_2}{(N_1,N_2)} \]
+
+\vspace{12 pt}
+\subsection{Exercise}
+\noindent(1) if \((a,b)=1\) \(\Rightarrow\) \((a^n,b^n)=1\)\\
+(2) if \(a^n\mid b^n\) \(\Rightarrow\) \(a\mid b\)\\
+(3) if \(a\mid n\) , \(b\mid n\) \(\Rightarrow\) \([a,b]\mid n\)\\
+(4) if \(a\mid n\) and \(b\mid n\) , whether \(\exists u,v\) , let \(ua+vb=n\)\\
+(5) if \(2^n-1\) is a prime \(\Rightarrow\) n is a prime\\
+(6) if \(\exists \sqrt{m},\sqrt{n}\in\mathbb{Z},\forall k\in \{k=x \mid x\ is\ a\ odd\ number\}\) \(\Rightarrow\) \(k=m-n\)\\
+(7)\(\frac{n^5}{5}+\frac{n^3}{3}+\frac{7n}{15}\in\mathbb{Z}\) \\
+(8) \(\forall x,y\ \Rightarrow\ 8\nmid x^2-y^2-2\)\\
+(9) if \(n=c_k\cdot 10^k+\cdots +c_1\cdot 10+c_0\) and \(11\mid n\) \(\Leftrightarrow\) \(11\mid\ \sum_{i=0}^{k}{(-1)^{i}c_{k-i}}\)\\
+(10) if \(m,n\in\mathbb{Z}\) no matter how to choose the \(+,-\) , \(\sum_{i=0}^{n}({\pm \frac{1}{m+i}})\notin \mathbb{Z}\) 
+
+\newpage
+\section{Congruence}
+\subsection{The Difinition and Property of Congruence}
+
+suppose a,b,q,r\(\in\)\(\mathbb{Z}\) , a=bq+r , \(\vert\)r\(\vert\)$<$b, marked as a(mod b)=r
+
+if a(mod p)=b(mod p) , it is called a and b are congruent , marked as a\(\equiv\)b(mod p)
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\\(1)a\(\equiv\)b(mod p) \(\Leftrightarrow\) p\(\mid\)\(\pm\)(a-b)
+\\(2)if \(a_1\)\(\equiv\)\(b_1\)(mod p) and \(a_2\)\(\equiv\)\(b_2\)(mod p) \(\Leftrightarrow\) (\(a_1\pm a_2\))\(\equiv\)(\(b_1\pm b_2\))(mod p)
+\\(3)if \(a_1\)\(\equiv\)\(b_1\)(mod p) and \(a_2\)\(\equiv\)\(b_2\)(mod p) \(\Leftrightarrow\) (\(a_1a_2\))\(\equiv\)(\(b_1b_2\))(mod p)
+\\(4)if am\(\equiv\)bm(mod p) and (m,p)=1 \(\Leftrightarrow\) a\(\equiv\)b(mod p)
+\\(5)if a\(\equiv\)b(mod p) and d\(\mid\)p \(\Leftrightarrow\) a\(\equiv\)b(mod d)
+
+\vspace{12 pt}
+\textbf{Prove:}
+\\(1)(2)skip
+\\(3)suppose
+\begin{align*} 
+a_1&=q_{11}p+r_1\\
+b_1&=q_{12}p+r_1\\
+a_2&=q_{21}p+r_2\\
+b_2&=q_{22}p+r_2\\
+a_1a_2&=q_{11}q_{21}p^2+q_{21}r_1p+q{11}r_2p+r_1r_2\\
+b_1b_2&=q_{12}q_{22}p^2+q_{22}r_1p+q{12}r_2p+r_1r_2\\
+\therefore a_1a_2&\equiv b_1b_2(mod p)
+\end{align*}
+\\(4)
+\begin{align*}
+&\because am\equiv bm(mod p)\\
+&\therefore p\mid m(a-b)\\
+&\because (m,p)=1\\
+&\therefore p\nmid m\\
+&\therefore p\mid (a-b)\\
+&\therefore a\equiv b(mod p)\\
+\end{align*}
+\\(5)
+\begin{align*}
+\because &a\equiv b(mod p) \\
+ &d\mid p\\
+\therefore &a=q_1p+r\\
+&b=q_2p+r\\
+&p=qd\\
+\therefore & a=q_1qd+r\\
+& b=q_2qd+r\\
+& a\equiv b(mod d)\\
+\end{align*}
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\\ \(\forall\)N\(\in\)\(\mathbb{Z}\) and p\(\ge\)2
+\[N=n_dp^d+\cdots+n_1p^1+n_0\]
+\\ \(n_i\)\(\in\)\(\mathbb{Z}\) , \(\vert\)\(n_i\)\(\vert\) $<$p , \(n_d\)\(\neq\)0 
+
+\vspace{12 pt}
+\subsection{Euler's Totient Function}
+
+\(\varphi\)(m)=\(\vert\)S\(\vert\) , S=\{ a \(\vert\) a\(\in\)\(\mathbb{Z}\) , a$<$m , (a,m)=1 \}
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\\\[\varphi (m)=m\sum_{i=1}^{k}(1-\frac{1}{p_i})\qquad m=\prod_{i=1}^{k}{p_{i}^{a_i}}\]
+
+\vspace{12 pt}
+\textbf{Prove:}
+\begin{align*}
+\varphi (m)&=\vert \{1,2,3,\cdots ,m-2,m-1\} - \mathcal{D}(m)+\{1\}\vert \\
+\varphi (m)&=m-\vert \mathcal{D}(m) \vert \\
+\mathcal{D}(m)&=\{ d \vert d=\prod_{i=1}^{k'}{p_{i}^{a_i}} \}\quad a_i=0,1,\cdots ,a_k \quad k'=k\\
+\vert \mathcal{D}(m) \vert &= \prod_{i=1}^{k}(a_k+1)
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\end{align*}
+
+\vspace{12 pt}
+\subsubsection{Euler Theorem}
+
+if (a,m)=1 ,then
+\[a^{\varphi (m)}\equiv 1(mod m)\]
+
+\textbf{Prove:}
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\vspace{12 pt}
+\subsubsection{Fermat's Little Theorem}
+
+if p is a prime , \(\forall\)a\(\in\)\(\mathbb{Z}\)
+\[a^p\equiv a(mod p)\]
+
+\textbf{Prove:}
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\vspace{12 pt}
+\subsection{Exercise:}
+\begin{align*}
+&\text{(1) if }a\equiv b(mod\ m_i)\ ,\ i=1,2\cdots n\ \Rightarrow \ a\equiv b(mod\ [m_1,\cdots,m_n])\\
+&\text{(2) if }p,q\text{ are prime and }p\neq q \Rightarrow q^{p-1}+p^{q-1}\equiv 1(mod\  pq)\\
+&\text{(3) if }(a,b)=1,c\neq0 \Rightarrow \exists n,(a+nb,c)=1
+\end{align*}
+
+\newpage
+\section{Congruence Equation}
+\subsection{Residue System}
+\(\forall\)n\(\in\)\(\mathbb{Z}\) , n\(\equiv\)r(mod p) \(\Leftrightarrow\) n=qp+r , r=0,\(\pm\)1,\(\pm\)2,\(\cdots\)
+\\let
+\\\(\overline{0}\)=\{0,\(\pm\)p,\(\pm\)2p,\(\cdots\)\}
+\\\(\overline{1}\)=\{\(\pm\)1,1\(\pm\)p,1\(\pm\)2p,\(\cdots\)\}
+\\\(\vdots\)
+\\\(\overline{p-1}\)=\{(p-1),(p-1)\(\pm\)p,(p-1)\(\pm\)2p,\(\cdots\)\}
+\vspace{12 pt}
+\\\(\overline{i}\) is a residue class of n mod p
+
+\vspace{12 pt}
+\subsubsection{Complete Residue System}
+choose a number from each residue class to represent its residue class , all these numbers form a set  
+, \{ \( \overline{0},\overline{1},\cdots,\overline{p-1} \) \} is  a complete residue system of n mod p
+
+\subsubsection{Reduced Residue System}
+if  \{ \( {1},{j},\cdots,{p-1} \) \}\(\subset\)\{ \( \overline{0},\overline{1},\cdots,\overline{p-1} \) \} , \(\forall\)a\(\in\)\{ \( {1},{j},\cdots,{p-1} \) \} , 
+(a,p)=1 , then \{ \( {1},{j},\cdots,{p-1} \) \} is a reduced residue system of n mod p
+
+\(\vert\)\{ \( 1,{j},\cdots,{p-1} \) \}\(\vert\)=\(\varphi\)(p)
+
+\textbf{Theorem:}
+\\(1)if \{ \(x_1,x_2,\cdots,x_{\varphi (m)}\)\} is a reduced residue system , (a,m)=1 \(\Rightarrow\) \{ \(ax_1,ax_2,\cdots,ax_{\varphi (m)}\)\} is a reduced residue system
+
+
+
+\vspace{12 pt}
+\subsection{Linear Congurence Equation}
+\subsubsection{Linear Congurence Equation}
+ax\(\equiv\)b(mod m) is called linear congurence equation
+
+\vspace{12 pt}
+\begin{align*}
+\because &ax\equiv b(mod\ m)\\
+\therefore &m\mid (ax-b)\\
+let\quad &ax-b=mq\\
+\therefore &ax=mq+b\\
+\therefore &x=\frac{m}{a}q+\frac{b}{a}\\
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+let\quad &a'=\frac{a}{(a,m)}\\
+&m'=\frac{m}{(a,m)}\\
+&(a',m')=1\\
+if\quad &(a,m)\mid b\\
+&b'=\frac{m}{(a,b)}\\
+&m'\mid (a'x-b')\\
+&a'x\equiv b'(mod\ m')\\
+&x\equiv b'a'^{-1}(mod\ m')\\
+&x=b'a'_{-1}+km'\qquad k=0,\pm 1,\pm 2,\cdots\\
+\because a(\frac{b}{(a,m)}a'^{-1}+km')(mod\ m)&=(a'a'^{-1}b+a'km)(mod\ m)=b(mod\ m)\quad k=0,1\cdots (a,m)-1\\
+\therefore &x\equiv a'^{-1}\frac{b}{(a,m)}+k\frac{m}{(a,m)}
+\end{align*}
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\\(1)ax\(\equiv\) b(mod m),(a,m)\(\mid\) b \(\Leftrightarrow\) x\(\equiv\) \(a'^{-1}\)\(\frac{b}{(a,m)}\)+k\(\frac{m}{(a,m)}\) ,  k=0,1\(\cdots\) (a,m)-1
+
+\vspace{12 pt}
+\subsubsection{Linear Congurence Equation Set}
+
+\begin{equation*}
+\left\{
+\begin{array}{lr}
+x&\equiv b_1(mod\ m_1) \\
+x&\equiv b_2(mod\ m_)\\
+\vdots&\\
+x&\equiv b_k(mod\ m_k)\\
+\end{array}
+\right.
+\end{equation*}
+it is called linear congurence equation 
+
+\vspace{12 pt}
+\subsubsection{Chinese Remainder Theorem}
+ When \((m_i,m_j)\)=1 , i\(\neq\)j and i,j=1,2\(\cdots\)k
+\begin{align*}
+x\equiv M^{-1}_1M_1b_1+\cdots+M^{-1}_kM_kb_k\\
+m=\prod_{i=1}^{k}{m_i}\qquad M_i=\frac{m}{m_i} \qquad M_i^{-1}M_i\equiv 1(mod m_i)
+\end{align*}
+\vspace{12 pt}
+\textbf{Prove:}
+\begin{align*}
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\end{align*}
+
+\vspace{12 pt}
+
+\subsection{Polynomial Congruence Equation}
+\[f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots +a_1x+a_0\]
+\[\because (x^p-x)\equiv 0(mod\ p) \] 
+\[ f(x)\equiv (x^p-x)q(x)+r(x)(mod\ p)\]
+\[\therefore f(x)\equiv r(x)(mod\ p)\]
+
+/vspace{12 pt}
+\textbf{Theorem:}
+if the numbers of solution of 
+\[f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots +a_1x+a_0\]
+is n\\
+then \(f(x)\)\(\mid\)\((x^p-x)\)
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\vspace{12 pt}
+\subsection{Wilson Theorem}
+suppose p is a prime
+\[(p-1)!+1\equiv 0(mod\ p)\]
+
+\vspace{12 pt}
+\subsection{Exercise:}
+\begin{align*}
+&\text{(1) } x\equiv 7(mod\ 10)\quad x\equiv 3(mod\ 12)\quad x\equiv 12(mod\ 15)\\
+&\text{(2) } 3x^{14}+4x^{13}+2x^{11}+x^{9}+x^{6}+x^3+12x^2+x\equiv 0(mod\ 7)
+\end{align*}
+
+
+
+\newpage
+\section{Quadratic Residue}
+\subsection{Difinition and Property of Quadratic Residue}
+if p is an odd prime and 
+\[x^2\equiv a(mod\ p)\qquad (a,p)=1\]
+has a solution,then a is a quadratic residue of p , otherwise a is quadratic non-residue of p
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\\(1)if p is an odd prime , there are \(\frac{p-1}{2}\) quadratic residue and \(\frac{p-1}{2}\) quadratic non-residue 
+\\(2)if p is an odd prime , (a,p)=1 
+\\ a is a quadratic residue mod p \(\Leftrightarrow\) \(a^{\frac{p-1}{2}}\equiv 1(mod p)\)
+\\ a is a quadratic non-residue mod p \(\Leftrightarrow\) \(a^{\frac{p-1}{2}}\equiv -1(mod p)\)
+
+\vspace{12 pt}
+\textbf{Prove:}
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\vspace{12 pt}
+\subsection{Legendre Symbol}
+if a is an odd prime , a\(\in\)\(\mathbb{Z}\)
+\[ (\frac{a}{p})=a^{\frac{p-1}{2}}(mod\ p)=
+\left\{
+\begin{aligned}
+&1\qquad a\ is\ a\ quadratic\ residue\ mod\ p\\
+&-1\qquad a\ is\ not\ a\ quadratic\ residue\ mod\ p\\
+&0\qquad p\mid a
+\end{aligned}
+\right.
+\]
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\[(1)\quad(\frac{1}{p})=1\ , \ (\frac{-1}{p})=(-1)^{(\frac{p-1}{2})}\]
+\[(2)\quad if\quad a\equiv b(mod\ p)\ \Leftrightarrow \ (\frac{a}{p})=(\frac{b}{p})\]
+\[(3)\quad  (\frac{a+p}{p})=(\frac{a}{p})   \]
+\[(4)\quad  (a,p)=1\ \Leftrightarrow \ (\frac{a^2}{p})=1 \]
+\[(4)\quad (\frac{a_1a_2\cdots a_n}{p})=(\frac{a_1}{p})(\frac{a_2}{p})\cdots (\frac{a_n}{p}) \]
+
+\vspace{12 pt}
+\textbf{Prove:}
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\vspace{12 pt}
+\textbf{Lemma:}
+\[(1)\quad (\frac{2}{p})=(-1)^{\frac{p^2-1}{8}}  \]
+
+\vspace{12 pt}
+\subsubsection{Quadratic Reciprocity Law}
+if p,q are odd prime , (p,q)=1 , then
+\[(\frac{q}{p})=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}(\frac{p}{q})\]
+
+\vspace{12 pt}
+\subsection{Jacobi Symbol}
+if m is an odd and m$>$1 , m=\(p_1p_2\cdots p_r\) , \(p_i\)is a prime , then
+\[(\frac{a}{m})=(\frac{a}{p_1})(\frac{a}{p_2})\cdots(\frac{a}{m_r})\]
+\\\(p_1,p_2\cdots p_r\) can be duplicate
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\[(1)\quad(\frac{1}{m})=1\]
+\[(2)\quad if \ a\equiv b(mod\ m)\ \Leftrightarrow \ (\frac{a}{m})=(\frac{b}{m})\]
+\[(3)\quad if\ (a,m)=1\ \Leftrightarrow \ (\frac{a^2}{m})=1\]
+\[(4)\quad (\frac{a+m}{m})=(\frac{a}{m})\]
+\[(5)\quad (\frac{a_1a_2\cdots a_n}{m})=(\frac{a_1}{m})(\frac{a_2}{m})\cdots (\frac{a_n}{m})\]
+\[(6)\quad(\frac{-1}{m})=(-1)^{\frac{m-1}{2}}\]
+\[(7)\quad (\frac{2}{m})=(-1)^{\frac{m^2-1}{8}}\]
+\[(8)\quad if\ m,n>1\ and \ m\ ,\ n\ is \ odd \ prime\ \Rightarrow \ (\frac{n}{m})=(-1)^{\frac{m-1}{2}\frac{n-1}{2}}(\frac{m}{n})\]
+
+\vspace{12 pt}
+\textbf{Prove:}
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+
+\vspace{12 pt}
+\subsection{Exercise:}
+\begin{align*}
+\text{(1)if }&p \text{ is an odd prime , }p\equiv 1(mod\ 4) \Rightarrow\\
+&\text{in }1,2\cdots \frac{p-1}{2}\ ,\ \text{there are }\frac{p-1}{4}\ \text{quadratic residue and non-quadratic residue} \\
+\end{align*}
+
+\vspace{12 pt}
+\section{Discrete Logarithm}
+\subsection{Index and Primitive Root}
+if d$>0$ and d\(\in\)\(\mathbb{Z}\)
+\[a^{d}\equiv 1(mod\ p)\]
+\(d_{min}\) is called index of a mod p , marked as \(ord_m(a)\)
+
+\vspace{12 pt}
+if 
+\[ord_m(a)=\varphi (m)\]
+then a is a primitive root mod m
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\[(1)\quad if\ a\equiv b(mod\ m) \ \Rightarrow \ ord_m(a)=ord_m(b)\]
+\[(2)\quad a^d\equiv 1(mod\ m) \ \Leftrightarrow \ ord_m(a)\mid d\]
+\[(3)\quad ord_m(a)\mid \varphi (m)\]
+\[(4)\quad if \ a^{-1}a\equiv 1(mod\ m) \ \Rightarrow \ ord_m(a^{-1})=ord_m(a)\]
+\[(5)\quad a^d\equiv a^k(mod\ m) \ \Rightarrow \ d\equiv k(mod\ ord_m(a))\]
+\[(6)\quad if\ k>0\ and\ k\in \mathbb{Z}\ \Rightarrow \ ord_m(a^k)=\frac{ord_m(a)}{(ord_m(a),k)}\]
+\[(7)\quad if\ there\ is\ a\ primitive\ root\ mod\ m\ ,\ and\ there\ are\ \varphi(\varphi(m))\ primitive\ roots\ in\ total\]
+\[(8)\quad ord_m(ab)=ord_m(a)ord_m(b) \ \Leftrightarrow \ (ord_m(a),ord_m(b))=1\]
+\[(9)\quad if\ n\mid m\ \Rightarrow \ ord_m(a)\mid ord_m(a)\]
+\[(10)\quad if\ (m_1,m_2)=1 \ \Rightarrow \ ord_{m_1m_2}(a)=[ord_{m_1}(a),ord_{m_2}(a)]\]
+
+\vspace{12 pt}
+\textbf{Prove:}
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+\vspace{12 pt}
+\subsection{Existence of Primitive Root}
+\textbf{Theorem:}
+\[(1)\quad if\ p\ is\ an\ odd\ prime\ ,\ then\ there\ are\ primitive\ roots\ mod\ p\]
+\[(2)\quad there\ are\ primitive\ roots\ mod\ m\ \Leftrightarrow \ m=2,4,p^{\alpha},2p^{\alpha}\qquad p\ is\ an\ odd\ prime\]
+(3)\quad suppose the different divisors of \(\varphi\)(m) is \( q_1,q_2\)\(\cdots\) \(q_k\) and (g,m)=1 ,
+ g is a primitive root \(\Leftrightarrow\) \(g^{\frac{\varphi(m)}{q_i}}\neq 1(mod\ p)\) ,\quad i=1,2\(\cdots\) k
+  
+\vspace{12 pt}
+\textbf{Prove:}
+%！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+
+\vspace{12 pt}
+\subsection{Discrete Logarithm}
+if g is a primitive root mod m , \(\forall\)a\(\in\)\(\mathbb{Z}\) , (a,m)=1
+\[a\mid g^{\gamma}(mod\ m)\qquad 0\leq \gamma \leq \varphi(m)\]
+\\\(\gamma\) is a discrete logarithm , marked as \(ind_ga\)
+
+\vspace{12 pt}
+\textbf{Theorem:}
+\[(1)\quad ind_g1=0,ind_gg=1\]
+\[(2)\quad ind_g(ab)\mid ind_ga+ind_gb\ (mod\ \varphi(m))\]
+\[(3)\quad ind_ga^n\mid n\cdot ind_ga\ (mod\ \varphi(m))\qquad n\geq 1\]
+\[(4)\quad if\ g\ and\ g'\ are\ primitive\ roots\ mod\ m\ \Rightarrow ind_ga\mid ind_{g'}a\cdot ind_gg'\ (mod\ \varphi(m))\]
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Basics}{2}%
+\contentsline {section}{\numberline {2}Distribution}{2}%
+\contentsline {subsubsection}{\numberline {2.0.1}Chi-Square Distribution}{2}%
+\contentsline {subsubsection}{\numberline {2.0.2}t-Distribution}{2}%
+\contentsline {subsubsection}{\numberline {2.0.3}F-Distribution}{3}%
+\contentsline {section}{\numberline {3}Sampling Distribution}{4}%
+\contentsline {section}{\numberline {4}Parameter Estimation}{5}%
+\contentsline {subsection}{\numberline {4.1}Moment Estimation}{5}%
+\contentsline {subsection}{\numberline {4.2}Maximum Likelihood Estimation}{5}%
+\contentsline {subsection}{\numberline {4.3}Optima Criterion of Estimation}{5}%
+\contentsline {subsubsection}{\numberline {4.3.1}Unbaised}{5}%
+\contentsline {subsubsection}{\numberline {4.3.2}effectiveness}{5}%
+\contentsline {subsubsection}{\numberline {4.3.3}Consistence}{5}%
+\contentsline {subsection}{\numberline {4.4}Interval Estimation}{5}%
+\contentsline {subsubsection}{\numberline {4.4.1}Confident Interval}{5}%

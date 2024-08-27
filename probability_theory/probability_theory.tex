@@ -1,0 +1,382 @@
+\documentclass{ctexart}	
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\setlength{\parindent}{1.5em}
+\renewcommand\contentsname{content}	
+\date{}
+
+\title{Probability Theory}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section {Basical Probabilistic Model}
+\vspace{12 pt}
+
+\subsection{Space of Elementary Events}
+
+if a test has limited consequences , these consequences \(\omega_1,\cdots,\omega_N\) are called \textbf{Elementary Events} , and
+\[\Omega = \{ \omega_1 , \cdots , \omega_N \}\]
+
+\noindent is called \textbf{(Limited) Space of Elementary Events}
+
+\vspace{ 12 pt}
+if A\(\subseteq\)\(\Omega\) , A is an \textbf{Event} 
+
+if A\(\subseteq \Omega\) and B\(\subseteq \Omega\) , then 
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\vspace{12 pt}
+
+
+\subsection{Classcal Probabilistic Models}
+suppose \(\omega_1 ,\cdots  , \omega_N \subseteq \Omega \) and \(\ N  <\infty \) , then 
+\[P(\omega_i)=\frac{1}{N}\]
+
+ \(\forall A \in \mathscr{A}\)
+\[P(A)=\frac{N(A)}{N}\]
+\vspace{12 pt}
+
+\subsubsection{Random Sampling}
+\textbf{Order Sampling with Replacement}
+choose N balls from M boxes is a way of order sampling with replacement
+
+mark the consequence event as A , and \(A =(a_1 ,\cdots ,a_N)\) 
+\[\Omega = \{\omega : \omega =(a_1,\cdots ,a_n),a_i=1,\cdots ,M \}\]
+and 
+\[N(\Omega)=M^n\]
+
+
+\textbf{Disorder Sampling with Replacement}
+if \(N<M\)
+\[\Omega =\{ \omega : \omega =[a_1,\cdots ,a_n],a_i=1, \cdots ,M\}\]
+and 
+\[N(\Omega)=C_{M+N-1}^{N}\]
+
+\vspace{12 pt}
+\textbf{Order Sampling without Replacement}
+
+\[\Omega =\{\omega : \omega =(a_1 ,\cdots , a_N),a_k\neq a_l,k\neq l,a_i=1,\cdots ,M \}\]
+and 
+\[N(\Omega)=A^{N}_{M}\]
+
+\textbf{Disorder Sampling without Replacement}
+\[\Omega =\{\omega : \omega =[\omega_1 , \cdots , \omega_N], a_k\neq a_l , k\neq l , a_i=1, \cdots ,N\}\]
+and
+\[N(\Omega)=C^{N}_{M}\]
+
+\vspace{12 pt}
+\subsubsection{Arrangment}
+
+
+\vspace{12 pt}
+\subsubsection{Binomial Distribution}
+toss a coin n times in a row , and for \((a_1,\cdots ,a_N)\) , when it is obverse side \(a_i=1\) and it is reverse side \(a_i=0\)
+\[\Omega =\{\omega :\omega =(a_1 ,\cdots ,\omega_n),a_i=0 or 1\}\]
+and
+\[\forall a_i ,P(a_i=1)=p\]
+then
+\[P(\omega )= p^{\sum a_i}(1-p)^{n-\sum{a_i}}\]
+
+\[P(A)=\sum_{\omega \in A}{P(\omega )}\quad A\in \mathscr{A}\]
+
+\vspace{12 pt}
+\subsubsection{Multinomial Distribution}
+
+
+\vspace{12 pt}
+\subsubsection{Hypergeoetric Distrbution}
+e.g there are M balls in a box , their number are \(1,\cdots ,M\) , and \(M_i\) balls have color \(c_i\) , \(\sum{M_i}=M\) , choose n balls ,the number of balls that color is \(c_i\) is \(n_i\) ,then
+\[P(B_{n_1,\cdots ,n_r})=\frac{C^{n_1}_{M_1}\cdots C^{n_r}_{M_r}}{C^{n}_{M}}\]
+
+\vspace{12 pt}
+\subsubsection{Stirling's Approximation}
+\[n!=\sqrt{2\pi n}(\frac{n}{e})^{n}e^{\frac{\theta_{n}}{12n}} \quad ,0<\theta_n <1\]
+
+\vspace{12 pt}
+\subsection{Conditional Probability}
+\subsubsection{Conditional Probbility}
+the probability of B under the condition of A is \textbf{Conditional Probability} , marked as 
+\[P(B\mid A)\]
+and 
+\[P(B\mid A)=\frac{P(AB)}{P(A)}\]
+
+\subsubsection{Total Probability Theorem}
+suppose \(A_1+\cdots +A_n=\Omega\) , \(B\in \Omega\)
+\[P(B)=\sum^{n}_{i=1}{P(B\mid A_i)P(A_i)}\]
+
+\vspace{12 pt}
+\subsubsection{Bayes Rule}
+if \(A,B\in \Omega\) , \(P(A),P(B)>0\)
+\[P(A_i)=\frac{P(A_i)P(B\mid A_i)}{\sum^{n}_{j=1}{P(A_j)P(B\mid A_j)}}\]
+
+\subsubsection{Independence}
+if A and B are independent
+\[P(AB)=P(A)P(B)\]
+
+\newpage
+\section{Random Variable}
+\vspace{12 pt}
+
+\subsection{Cumulative Distribution Function}
+\[\forall x,F(x)=P\{X\leq x\}=P\{\omega \mid X(\omega)\leq x\}\]
+
+\textbf{Therom:}
+\[\forall x_1,x_2,if\quad x_1\leq x_2,\quad F(x_1)\leq F(x_2)\]
+\[0\leq F(x)\leq 1 , \lim_{x \to -\infty}F(x)=0, \lim_{x \to +\infty}F(x)=1\]
+\[F(x+0)=F(x)\]
+
+\vspace{12 pt}
+\subsubsection{Discrete Random Variable}
+if randdom variable X is limited and the value are \(x_1,\cdots ,x_n ,\cdots\) , \(P\{X=x_i\}=p_i\) , then 
+\[p_i\geq 0\]
+\[\sum_{i=1}^{\infty}p_i=1\]
+then X is a discrete random variable
+
+\vspace{12 pt}
+\subsection{Common Distribution}
+\subsubsection{Poission Distribution}
+\[P\{X=k\}=\frac{\lambda^k}{k!}e^{-\lambda},k=0,1,\cdots ;\quad \lambda >0\]
+
+\textbf{Poission Therom:}
+%!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+\subsection{Probability Density Function}
+\[F(X)=\int^{x}_{-\infty}f(u)du\]
+\(f(x)\) is probability density function
+
+\vspace{ 12 pt}
+\subsubsection{Uniform Distribution}
+
+\[ f(x)=\left\{
+\begin{aligned}
+&\frac{1}{b-a},a<x<b \\
+&0 \ , \ other
+\end{aligned}
+\right.
+\]
+
+\(X\sim U(a,b)\)
+
+\[
+F(x)=\left\{
+\begin{aligned}
+&0 \ , \ x<a \\
+&\frac{x-a}{b-a}\ , \ a\leq x <b \\
+&1\ , \ b\leq x
+\end{aligned}
+\right.
+\]
+
+\subsubsection{Exponential Distribution}
+\[
+f(x)=\left\{
+\begin{aligned}
+&\lambda e^{-\lambda x}\ , \ x>0 \\
+&0 \  , \ x\leq 0
+\end{aligned}
+\right.
+\]
+
+\subsubsection{Normal Distribution}
+\(X\sim N(\mu , \sigma^2)\)
+\[
+\phi (x;\mu ,\sigma^2)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\ , \ x\in R\]
+
+\[\forall a,b \ , \ X\sim N(a,b) \Rightarrow P(x_1<x<x_2)=\Phi(\frac{x_2-a}{\sqrt{b}})-\Phi(\frac{x_1-a}{\sqrt{b}})\]
+
+\[\Phi(-x)=1-\Phi(x)\]
+
+\vspace{12 pt}
+\subsection{Joint Distribution Function}
+if \((X,Y)\) is in \(\Omega\) , their distribution function are
+\[F_{X}(x)=P\{X\leq x\}\ , \ F_{Y}(y)=P\{Y\leq y\}\]
+joint distribution function is 
+\[F(x,y)=P\{X\leq x,Y\leq y\}\]
+
+\textbf{Therom:}
+\[P\{X\leq x \}=P\{X\leq x , Y<+\infty\}\]
+\[P\{Y\leq y\}=P\{X<+\infty , Y\leq y\}\]
+\[F_X(x)=\lim_{y \to +\infty}F(x,y)\]
+\[F_Y(y)=\lim_{x \to +\infty}F(x,y)\]
+\[P\{x_1<X\leq x_2,y_1<Y\leq y_2\}=F(x_2,y_2)-F(x_2,y_1)-F(x_1,y_2)+F(x_1,y_1)\]
+
+\subsubsection{Discrete Jiont Distribution Function}
+\[F(x,y)=\sum_{x_i\leq x}\sum_{y_j\leq j}p_{ij}\]
+
+\vspace{12 pt}
+\subsubsection{Joint Probability Density}
+\[F(x,y)=\int_{-\infty}^{x}\int_{-\infty}^{y}f(u,v)dudv\]
+\[G\subset \mathbb{R}^2\ , \ P\{(X,Y)\in G\}=\iint_{G}f(x,y)d\sigma\]
+\[f_X(x)=\int_{-\infty}^{+\infty}f(x,y)dy \ , \ x\in \mathbb{R}\]
+\[f_Y(y)=\int_{-\infty}^{+\infty}f(x,y)dx\ , \ y\in \mathbb{R}\]
+\[F_X(x)=F(x,+\infty)=\int_{-\infty}^{x}[\int_{-\infty}^{+\infty}f(u,v)dv]dv\]
+
+\vspace{12 pt}
+\subsubsection{Geometric Probability}
+\[
+f(x,y)=
+\left\{
+\begin{aligned}
+&\frac{1}{S(G)}\ , \ (x,y)\in G\\
+&0\ , \ (x,y)\notin G
+\end{aligned}
+\right.
+\]
+
+\subsubsection{Two-Dimensional Normal Distribution}
+\[\phi(x,y)=\frac{1}{2\pi \sigma_1\sigma_2\sqrt{1-\rho^2}}e^{-\frac{1}{2(1-\rho^2)}[\frac{(x-\mu_1)^2}{\sigma_1^2}-2\rho\frac{(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}+\frac{(y-\mu_2)^2}{\sigma_2^2}]}\ , \ x\in\mathbb{R}\ , \ y\in \mathbb{R}\]
+
+\subsubsection{Independence}
+\[F(x,y)=F_X(x)F_Y(y)\]
+\[f(x,y)=f_X(x)f_Y(y)\]
+
+\subsubsection{Conditional Distribution}
+\[P\{Y=y_j,X=x_i\}=\frac{p_{ij}}{p_i}\]
+\[f_{X\mid Y}(x\mid y)=\frac{f(x,y)}{f_X(x)}\]
+
+\subsubsection{Random Variable Function}
+if \(y=y(x)\)
+\[
+f_Y(y)=
+\left\{
+\begin{aligned}
+&f_X[x(y)]\mid x(y)'\mid \ , \ \alpha < y \beta\\
+&0 \ ,\ other
+\end{aligned}
+\right.
+\]
+
+\vspace{12 pt}
+\(Z_1=max\{X,Y\}\) , \(Z_2=min\{X,Y\}\)
+\[F_{Z_1}=P\{max\{X,Y\leq z\}=P\{X\leq z , Y\leq z\}=P\{X\leq z\}P\{Y\leq z\}=F_X(z)F_Y(z)\}\]
+\[F_{Z_2}=P\{min\{X,Y\}\leq z\}=1-P\{min\{X,Y\}>z\}=1-P\{X>z,Y>z\}=1-P\{X>z\P\{Y>z\}=1-[1-P\{X\leq z\}][1-P\{Y\leq z\}]=1-[1-F_X(z)][1-F_Y(z)]   \]
+
+
+\newpage
+\section{Numercial Characters}
+\subsection{Expection}
+\subsubsection{Discrete Distribution}
+\[P\{X=x_i\}=p_i\ , \ E(X)=\sum_{\infty}^{i=1}x_ip_i\]
+
+\subsubsection{Continuous Distribution}
+\[E(X)=\int^{+\infty}_{-\infty}xf(x)dx\]
+
+\subsubsection{Property}
+\begin{align*}
+&E(C)=C \\
+&E(CX)=CE(X) \\
+&E(X+Y)=E(X)+E(Y) \\
+&E(XY)=E(X)E(Y)  \\
+\end{align*}
+
+
+\subsubsection{Random Variable Function}
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\subsection{Variance}
+\[D(X)=E[X-E(X)]^2\]
+\subsubsection{Discrete Distribution}
+\[D(X)=\sum^{\infty}_{i=1}[x_i-E(X)]^2P\{X=x_i\}\]
+\subsubsection{Continuous Distribution}
+\[D(X)=\int^{+\infty}_{-\infty}[x-E(X)]^2f_X(s)dx\]
+
+\subsubsection{Property}
+\begin{align*}
+&D(C)=0 \\
+&D(CX)=C^2D(X) \\
+&D(X\pm Y)=D(X)+D(Y)+\pm 2E\{[X-E(X)][Y-E(Y)]\}
+\end{align*}
+
+\vspace{12 pt}
+\subsection{Expection and Variance of Common Distribution Function}
+\subsubsection{Binomial Distribution}
+\[X\sim B(n,p)\Rightarrow E(X)=np\ , \ D(X)=np(1-p)\]
+
+\subsubsection{Poisson Distribution}
+
+\[ X\sim P(\lambda)\Rightarrow \ E(X)=\lambda \ , \ D(X)=\lambda\]
+
+
+\subsubsection{Geometric Distribution}
+
+\[X\sim U(a,b) \Rightarrow E(X)=\frac{a+b}{2}\ , \ D(X)=\frac{(b-a)^2}{12}\]
+
+\subsubsection{Exponential Distribution}
+\[E(X)=\frac{1}{\lambda}\ , \  D(X)=\frac{1}{\lambda^2}\]
+
+\subsubsection{Normal Distribution}
+\[X\sim N(\mu,\sigma^2)\Rightarrow E(x)=\mu\ , \ D(x)=\sigma^2\]
+
+\subsection{Covariance}
+\[cov(X,Y)=E\{[X-E(X)][Y-E(Y)]\}\]
+is the covariance of X and Y
+
+especially
+\[D(X)=cov(X,X)\]
+
+therefore 
+\[D(X\pm Y)=D(X)+D(Y)\pm 2cov(X,Y)\]
+
+\vspace{12 pt}
+\textbf{Therom:}
+\[cov(X,Y)=cov(Y,X)\]
+\[cov(aX,bY)=abcov(Y,X)\]
+\[cov(X_1+X_2,Y)=cov(X_1,Y)+cov(X_2,Y)\]
+\[cov(X,Y)=E(XY)-E(X)E(Y)\]
+
+\subsection{Correlation Coefficient}
+for \((X,Y)\) , \(D(X)>0,D(Y)>0\)
+\[\rho_{XY}=\frac{cov(X,Y)}{\sqrt{D(X)D(Y)}}\]
+\[\rho_{XY}=E[\frac{X-E(X)}{\sqrt{D(X)}}\frac{Y-E(Y)}{\sqrt{D(Y)}}]=E(X^*Y^*)=cov(X^*,Y^*)\]
+
+\textbf{Therom:}
+\[\mid \rho_{XY}\mid \leq 1\]
+\[\mid \rho\mid =1\ \Leftrightarrow\ \exists b,a\neq 0,P\{Y=aX+b\}=1\]
+
+\subsection{Law of large numbers and Central limit Theorem}
+
+\subsubsection{Law of large numbers}
+\textbf{Chebyshev's Theorem} \\
+for random variable X , \(E(X)\) and \(D(X)\) exist , \(\forall \epsilon >0\)
+\[P\{\mid X-E(X)\mid \geq \epsilon\}\leq \frac{D(X)}{\epsilon^2}\]
+or
+\[P\{\mid X-E(X)\mid <\epsilon \}\geq 1-\frac{D(X)}{\epsilon^2}\]
+
+\textbf{Law of Large Numbers}
+for sequence of random variables \(X_1,\cdots , X_n , \cdots\) , \(E(X_i)\) exists , \(i=0,1\cdots\) , \(\forall \epsilon <0\)
+\[\lim_{x \to \infty}P\{\mid \frac{1}{n}\sum_{i=1}^{n}X_i-\frac{1}{n}\sum_{i=1}^{n}E(X_i)\mid <\epsilon   \}=1\]
+
+\subsubsection{Chebyshev Law of Large num-herd}
+if sequence of random variable \(X_1,\cdots ,X_n,\cdots\) are independent , \(E(X_i)\) and \(D(X_i)\) are exsit , and \(D(X_i)<C\) , \(i=0,1,\cdots\) , \(\forall \epsilon >0\)
+\[\lim_{n \to n}\{\mid \frac{1}{n}\sum_{i=1}^{n}X_i-\frac{1}{n}\sum_{i=1}^{n}E(X_i)\mid <\epsilon\}=1\]
+
+\subsubsection{Wiener-Khinchin Law of Large Numbers}
+for sequence \(X_1,\cdots , X_n , \cdots\) are independent ,and \(E(X_i)=\mu\) , \(i=0,1 \cdots\) , \(\forall \epsilon >0\)
+\[\lim_{n\to \infty}P\{\mid \frac{1}{n}\sum_{i=1}^{n}X_i-\mu \mid\}<\epsilon\}=1\]
+
+\subsubsection{Bernoulli Law of Large Num-hers}
+\[\lim_{n\to n}P\{\mid \frac{m}{n}-p\mid <\epsilon\}=1\]
+
+\subsection{Central Limit Theorom}
+if sequence \(X_1,\cdots X_n ,\cdots\) are independent
+\[\lim_{n\to \infty}P\{\frac{\sum_{i=1}^{n}X_i-\sum_{i=1}^{n}E(X_i)}{\sqrt{\sum_{i=1}^{x}D(X_i)}}\} =\Phi(x)=\int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt\ , \ -\infty <x <+ \infty  \]
+
+if \(E(X_i)=\mu\ , \ D(X_i)=\sigma^2>0\) , \(i=0,1,\cdots\)
+\[\lim_{n\to \infty}P\{\frac{\sum_{i=1}^{x}X_i-n\mu}{\sqrt{n}\sigma}\leq x\}=\Phi(x) \]
+
+\subsubsection{De Moivre-Laplace}
+if \(Y_n\sim B(n,p)\) , \(n=0,1,\cdots\) , \(\forall x\)
+\[\lim_{n\to \infty}P\{\frac{Y_n-np}{\sqrt{np(1-p)}}\leq x\}=\Phi(x)\]
+
+
+\end{document}
